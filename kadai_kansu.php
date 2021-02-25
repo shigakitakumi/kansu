@@ -1,34 +1,35 @@
 <?php
-function sum($max){
-    $result = 0;
-    for($i = 1; $i <= $max; $i++){
-        $result += $i;
-    }
-    return $result *2;
+function twice($number){
+    return $number *2;
 }
-echo sum(10);
+echo twice(10);
+echo "\n";
 
 function f($a, $b){
     return $a + $b;
 }
-echo add(3,5);
+echo f(3,5);
+echo "\n";
 
 function multiple($arr){
     $result = 1;
     foreach($arr as $num){
-        echo  
+        $result *= $num;
     }
     return $result;
 }
-echo multipule([1,3,5,7,9]);
+echo multiple([1,3,5,7,9]);
+echo "\n";
 
- function max_array($arr){
- $max_number = $arr[0];
- foreach($arr as $a){
-     
-     }
- }
-
- return $max_number;
- }
+function max_array($arr){
+    $max_number = $arr[0];
+    foreach($arr as $a){
+        if($max_number < $a){
+            $max_number = $a;
+        }
+    }
+    return $max_number;
+}
+echo max_array([10,8,24,3]);
+ echo "\n";
 ?>
